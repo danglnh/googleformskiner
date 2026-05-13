@@ -22,7 +22,7 @@ npm install
 ```env
 APP_PIN=your-pin
 AUTH_COOKIE_SECRET=long-random-secret-at-least-32-characters
-NEXT_PUBLIC_APP_URL=https://googleformskiner.haidangle.com
+NEXT_PUBLIC_APP_URL=https://your-domain.example.com
 ```
 
 3. Run dev server:
@@ -55,7 +55,7 @@ npm run start
 - `AUTH_COOKIE_SECRET`
 - `NEXT_PUBLIC_APP_URL`
 4. Deploy.
-5. Point domain `googleformskiner.haidangle.com` to Vercel project.
+5. Point domain `your-domain.example.com` to Vercel project.
 
 ## Google Form checklist
 

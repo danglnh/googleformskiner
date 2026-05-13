@@ -7,7 +7,7 @@ You are ChatGPT Codex. Build a complete production-ready web app named **Google 
 Google Form Skiner is a small private tool hosted at:
 
 ```text
-https://googleformskiner.haidangle.com
+https://your-domain.example.com
 ```
 
 The tool imports a public Google Form URL, parses its questions, and generates clean custom HTML + JavaScript that can be embedded into a hand-coded landing page. The generated form should visually integrate with the landing page instead of embedding the default Google Form iframe.
@@ -58,7 +58,7 @@ Create `.env.example`:
 ```env
 APP_PIN=change-this-pin
 AUTH_COOKIE_SECRET=replace-with-long-random-secret-at-least-32-chars
-NEXT_PUBLIC_APP_URL=https://googleformskiner.haidangle.com
+NEXT_PUBLIC_APP_URL=https://your-domain.example.com
 ```
 
 Rules:
@@ -535,7 +535,7 @@ Add README instructions for deployment to Vercel.
 The user will point:
 
 ```text
-googleformskiner.haidangle.com
+your-domain.example.com
 ```
 
 to the deployed app.
