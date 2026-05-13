@@ -24,3 +24,7 @@ coverage/
 
 # misc
 *.pem
+
+# local docs (do not track)
+README.md
+CODEX_PROMPT.md
