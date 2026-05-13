@@ -9,7 +9,15 @@ describe("normalize", () => {
 
   it("detects hidden keys", () => {
     expect(detectHiddenKey("UTM Source")).toBe("utm_source");
-    expect(detectHiddenKey("referrer")).toBe("referrer");
+    expect(detectHiddenKey("utm-source")).toBe("utm_source");
+    expect(detectHiddenKey("utm source")).toBe("utm_source");
+    expect(detectHiddenKey("UTM Medium")).toBe("utm_medium");
+    expect(detectHiddenKey("utm_campaign")).toBe("utm_campaign");
+    expect(detectHiddenKey("UTM Content")).toBe("utm_content");
+    expect(detectHiddenKey("utm-term")).toBe("utm_term");
+    expect(detectHiddenKey("Page URL")).toBe("page_url");
+    expect(detectHiddenKey("page_url")).toBe("page_url");
+    expect(detectHiddenKey("page url")).toBe("page_url");
     expect(detectHiddenKey("email")).toBeNull();
   });
 

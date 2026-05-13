@@ -4,8 +4,7 @@ const HIDDEN_KEYS = [
   "utm_campaign",
   "utm_content",
   "utm_term",
-  "page_url",
-  "referrer"
+  "page_url"
 ] as const;
 
 export type HiddenKey = (typeof HIDDEN_KEYS)[number];

@@ -104,6 +104,19 @@ export default function ImportForm() {
             {tab === "combined" ? <CodeBlock title="Combined Embed Code" code={combined} /> : null}
             {tab === "html" ? <CodeBlock title="HTML" code={html} /> : null}
             {tab === "js" ? <CodeBlock title="JavaScript" code={js} /> : null}
+
+            <div className="mt-4 rounded border border-sky-200 bg-sky-50 p-3 text-sm text-sky-900">
+              <p>Tracking fields are only captured if the original Google Form contains matching questions.</p>
+              <p className="mt-2 font-medium">Recommended short-answer tracking questions:</p>
+              <ul className="mt-1 list-disc pl-5">
+                <li>utm_source</li>
+                <li>utm_medium</li>
+                <li>utm_campaign</li>
+                <li>utm_content</li>
+                <li>utm_term</li>
+                <li>page_url</li>
+              </ul>
+            </div>
           </div>
         </>
       ) : null}

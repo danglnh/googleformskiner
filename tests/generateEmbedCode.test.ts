@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { generateCombined } from "@/lib/generateEmbedCode";
+import { generateCombined, generateJs } from "@/lib/generateEmbedCode";
 import type { GoogleFormSchema } from "@/types/googleForm";
 
 const schema: GoogleFormSchema = {
@@ -30,5 +30,13 @@ describe("generateCombined", () => {
     const out = generateCombined(schema);
     expect(out).toContain("formResponse");
     expect(out).toContain("data-gfs-hidden-key=\"utm_source\"");
+  });
+
+  it("generates JS that fills utm and page_url only", () => {
+    const js = generateJs();
+    expect(js).toContain("new URLSearchParams(window.location.search)");
+    expect(js).toContain("return params.get(key) || '';");
+    expect(js).toContain("key === 'page_url'");
+    expect(js).not.toContain("referrer");
   });
 });
