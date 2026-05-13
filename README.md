@@ -17,13 +17,7 @@ Private PIN-protected tool to import a public Google Form and generate clean HTM
 npm install
 ```
 
-2. Create env file:
-
-```bash
-cp .env.example .env.local
-```
-
-3. Set values in `.env.local`:
+2. Create `.env.local` manually and set values:
 
 ```env
 APP_PIN=your-pin
@@ -31,13 +25,13 @@ AUTH_COOKIE_SECRET=long-random-secret-at-least-32-characters
 NEXT_PUBLIC_APP_URL=https://googleformskiner.haidangle.com
 ```
 
-4. Run dev server:
+3. Run dev server:
 
 ```bash
 npm run dev
 ```
 
-5. Build production:
+4. Build production:
 
 ```bash
 npm run build
